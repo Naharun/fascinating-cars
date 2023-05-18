@@ -1,5 +1,4 @@
 import img1 from '../../../assets/images/cute-kid-playing-with-wooden-train-side-view_23-2149357243.avif';
-import img2 from "../../../assets/images/cute-little-boy-red-sweater_1157-45251.avif";
 import img3 from "../../../assets/images/father-son-playing-with-trucks-lego-pieces_23-2148500805.avif";
 import img4 from "../../../assets/images/happy-asian-children-playing-lawn-playground_640221-82.avif";
 import img5 from "../../../assets/images/superheroes-children-playing-home_411285-1169.avif";
@@ -8,27 +7,24 @@ import img7 from "../../../assets/images/toy-car-transporter-with-cars-white-bac
 
 const Gallery = () => {
     return (
-        <div className="h-96 carousel carousel-vertical rounded-box">
-            <div className="carousel-item h-full">
-                <img src={img1}/>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={img1} alt="Shoes" /></figure>
             </div>
-            <div className="carousel-item h-full">
-                <img src={img2} />
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={img3} alt="Shoes" /></figure>
             </div>
-            <div className="carousel-item h-full">
-                <img src={img3}/>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={img4} alt="Shoes" /></figure>
             </div>
-            <div className="carousel-item h-full">
-                <img src={img4}/>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={img5} alt="Shoes" /></figure>
             </div>
-            <div className="carousel-item h-full">
-                <img src={img5}/>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={img6} alt="Shoes" /></figure>
             </div>
-            <div className="carousel-item h-full">
-                <img src={img6}/>
-            </div>
-            <div className="carousel-item h-full">
-                <img src={img7}/>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={img7} alt="Shoes" /></figure>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 
 
-const ForAllToys = ({allToy}) => {
-    const{img, seller, toyName, subCategory, price, availableQuantity} = allToy;
+const ForAllToys = ({ allToy }) => {
+    const { img, seller, toyName, subCategory, price, availableQuantity } = allToy;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={img} alt="Shoes" /></figure>
