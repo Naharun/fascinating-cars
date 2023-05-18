@@ -1,8 +1,11 @@
+import AllToys from "../allToys/allToys";
+import MyToys from "../myToys/myToys";
 
 const Home = () => {
     return (
         <div>
-            <h2>This is home</h2>
+            <AllToys></AllToys>
+            <MyToys></MyToys>
         </div>
     );
 };
