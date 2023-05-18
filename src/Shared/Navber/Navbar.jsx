@@ -19,7 +19,7 @@ const Navbar = () => {
             {navPage}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Fascinating Cars</a>
+        <h2 className="text-xl font-bold capitalize hover:uppercase">Fas<span className="text-amber-500">cina</span>ting C<span className="text-amber-500">ar</span>s</h2>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -27,7 +27,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn" to="/blog">Blog</Link>
+        <Link className="btn btn-outline btn-warning" to="/blog">Blog</Link>
       </div>
     </div>
   );
