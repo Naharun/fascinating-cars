@@ -21,8 +21,8 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className='space-y-7 pl-12'>
-                    <h2 className='text-7xl font-bold'>A<span className='text-amber-500'>l</span>l Ki<span className='text-amber-500'>n</span>ds <br />Of Ca<span className='text-amber-500'>r</span>s <br /><span className='text-amber-500'> A</span>re Av<span className='text-amber-500'>a</span>ila<span className='text-amber-500'>b</span>le</h2>
-                    <p>We can provide the toy cars you need.There are <br /> many types of cars like <br /> sports car, truck, regular car, mini fire truck, mini police car, etc.</p>
+                    <h2 className='text-7xl font-bold'>A<span className='text-amber-500'>l</span>l Ki<span className='text-amber-500'>n</span>ds <br />Of Toy Ca<span className='text-amber-500'>r</span>s <br /><span className='text-amber-500'> A</span>re Av<span className='text-amber-500'>a</span>ila<span className='text-amber-500'>b</span>le</h2>
+                    <p>We can provide the toy cars you need.There are <br /> many types of toy cars like <br /> sports car, truck, regular car, mini fire truck, mini police car, etc.</p>
                     <button className='btn btn-warning'>Call Now</button>
                 </div>
             </div>

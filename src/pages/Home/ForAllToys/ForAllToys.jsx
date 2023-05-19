@@ -3,7 +3,7 @@
 const ForAllToys = ({ allToy }) => {
     const { img, seller, toyName, subCategory, price, availableQuantity } = allToy;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-full bg-base-100 shadow-xl">
             <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <ul className="list-none font-semibold">

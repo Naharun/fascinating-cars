@@ -8,22 +8,22 @@ import img7 from "../../../assets/images/toy-car-transporter-with-cars-white-bac
 const Gallery = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl mx-auto">
                 <figure><img src={img1} alt="Shoes" /></figure>
             </div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure><img src={img3} alt="Shoes" /></figure>
             </div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure><img src={img4} alt="Shoes" /></figure>
             </div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure><img src={img5} alt="Shoes" /></figure>
             </div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure><img src={img6} alt="Shoes" /></figure>
             </div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure><img src={img7} alt="Shoes" /></figure>
             </div>
         </div>

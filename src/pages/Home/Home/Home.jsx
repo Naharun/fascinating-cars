@@ -1,14 +1,14 @@
 import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
-import AllToys from "../allToys/allToys";
 import MyToys from "../myToys/myToys";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <br />
             <Gallery></Gallery>
-            <AllToys></AllToys>
+            <br />
             <MyToys></MyToys>
         </div>
     );
