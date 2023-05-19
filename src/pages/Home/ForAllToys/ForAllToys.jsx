@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const ForAllToys = ({ allToy }) => {
@@ -14,7 +15,7 @@ const ForAllToys = ({ allToy }) => {
                     <li>Available Quantity: {availableQuantity}</li>
                 </ul>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">View Details</button>
+                    <Link to='/login'><button className="btn btn-primary">View Details</button></Link>
                 </div>
             </div>
         </div>
