@@ -45,7 +45,7 @@ const Login = () => {
                                 <input className="btn btn-warning" type="submit" value="login" />
                             </div>
                         </form>
-                        <p><Link className="text-orange-950 font-bold" to="/registration">Please Registration</Link></p>
+                        <p><Link className="link link-error font-bold" to="/registration">Please Registration</Link></p>
                     </div>
                 </div>
             </div>

@@ -51,7 +51,7 @@ const RegistrationPage = () => {
                                 <input className="btn btn-warning" type="submit" value="registration" />
                             </div>
                         </form>
-                        <p><Link className="text-orange-950 font-bold" to="/login">Please Login</Link></p>
+                        <p><Link className="link link-error font-bold" to="/login">Please Login</Link></p>
                     </div>
                 </div>
             </div>
