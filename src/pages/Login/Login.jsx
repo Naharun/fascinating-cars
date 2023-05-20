@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
@@ -10,15 +10,15 @@ const Login = () => {
     useTitle('Login')
     const { signIn, setUser } = useContext(AuthContext)
     const provider = new GoogleAuthProvider();
-    const navigate = useLocation();
+    const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     const auth = getAuth();
     const handleLogin = event => {
         event.preventDefault();
-        const from = event.target;
-        const email = from.email.value;
-        const password = from.password.value;
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log(email, password);
         signIn(email, password)
             .then(result => {
@@ -32,6 +32,7 @@ const Login = () => {
                     confirmButtonText: 'Ok'
                 })
                 setUser(user)
+                form.reset();
             })
             .catch(error => console.log(error))
 
@@ -41,6 +42,13 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             setUser(user);
+            Swal.fire({
+                title: 'Success!',
+                text: 'You are logged in Successfully!',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            })
+            setUser(user)
             navigate(from, {replace: true})
         })
         .catch(error => {})
@@ -71,8 +79,7 @@ const Login = () => {
                                 <input className="btn btn-warning" type="submit" value="login" />
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-warning" type="submit" value="G" />
-                                <button onClick={handleGoogleLogin}>G</button>
+                                <input onClick={handleGoogleLogin} className="btn btn-glass" type="submit" value="G Login with Google" />
                             </div>
                         </form>
                         <p>Do not have an Account? Please  <Link className="link link-error font-bold" to="/registration">Registration</Link></p>

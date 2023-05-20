@@ -7,6 +7,7 @@ import AllToys from "../pages/Home/allToys/allToys";
 import Blog from "../pages/Home/Blog/Blog";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import SingleCarDetails from "../pages/SingleCarDetails/SingleCarDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/viewDetails/:id',
-        element: <SingleCarDetails></SingleCarDetails>,
+        element: <PrivateRoute><SingleCarDetails></SingleCarDetails></PrivateRoute>,
         loader: ({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
       },
     ]

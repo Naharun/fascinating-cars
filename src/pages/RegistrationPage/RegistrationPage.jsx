@@ -9,10 +9,11 @@ const RegistrationPage = () => {
     const handleRegistration = event => {
         event.preventDefault();
         const form = event.target;
+        const photo = event.form.photo.value;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password);
+        console.log(name, email,photo, password);
         createUser(email, password)
         .then(result =>{
             const user = result.user;
@@ -35,6 +36,12 @@ const RegistrationPage = () => {
                     <div className="card-body">
                         <h2 className="text-2xl font-bold">Registration Now</h2>
                         <form onSubmit={handleRegistration}>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" name="photo" placeholder="photoURL" className="input input-bordered" />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
