@@ -2,23 +2,19 @@ import { Link } from "react-router-dom";
 
 
 const ForAllToys = ({ allToy }) => {
-    const { img, seller, toyName, subCategory, price, availableQuantity } = allToy;
+    const {_id, seller, toyName, seller_email, subCategory, price, availableQuantity } = allToy;
     return (
-        <div className="card w-full bg-base-100 shadow-xl">
-            <figure><img src={img} alt="Shoes" /></figure>
-            <div className="card-body">
-                <ul className="list-none font-semibold">
-                    <li>Seller: {seller}</li>
-                    <li>Toy Name: {toyName}</li>
-                    <li>Sub-category: {subCategory}</li>
-                    <li>Price: ${price}</li>
-                    <li>Available Quantity: {availableQuantity}</li>
-                </ul>
-                <div className="card-actions justify-end">
-                    <Link to='/login'><button className="btn btn-primary">View Details</button></Link>
-                </div>
-            </div>
-        </div>
+
+        <tr>
+            <th>$</th>
+            <td>{seller}</td>
+            <td>{toyName}</td>
+            <td>{seller_email}</td>
+            <td>{subCategory}</td>
+            <td>{availableQuantity}</td>
+            <td>{price}</td>
+            <td><Link to={`/viewDetails/${_id}`}><button className="btn btn-glass">View Details</button></Link></td>
+        </tr>
     );
 };
 

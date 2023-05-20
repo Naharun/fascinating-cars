@@ -1,10 +1,19 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
+import Swal from "sweetalert2";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import useTitle from "../../hooks/useTitle";
 
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext)
+    useTitle('Login')
+    const { signIn, setUser } = useContext(AuthContext)
+    const provider = new GoogleAuthProvider();
+    const navigate = useLocation();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    const auth = getAuth();
     const handleLogin = event => {
         event.preventDefault();
         const from = event.target;
@@ -15,9 +24,26 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                from.reset();
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'You are logged in Successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                })
+                setUser(user)
             })
             .catch(error => console.log(error))
 
+    }
+    const handleGoogleLogin = () => {
+        signInWithPopup(auth, provider)
+        .then(result =>{
+            const user = result.user;
+            setUser(user);
+            navigate(from, {replace: true})
+        })
+        .catch(error => {})
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -36,7 +62,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name="password" placeholder="password" className="input input-bordered" />
+                                <input type="password" name="password" placeholder="password" className="input input-bordered" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
@@ -44,8 +70,12 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input className="btn btn-warning" type="submit" value="login" />
                             </div>
+                            <div className="form-control mt-6">
+                                <input className="btn btn-warning" type="submit" value="G" />
+                                <button onClick={handleGoogleLogin}>G</button>
+                            </div>
                         </form>
-                        <p><Link className="link link-error font-bold" to="/registration">Please Registration</Link></p>
+                        <p>Do not have an Account? Please  <Link className="link link-error font-bold" to="/registration">Registration</Link></p>
                     </div>
                 </div>
             </div>

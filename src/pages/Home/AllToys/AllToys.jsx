@@ -1,18 +1,31 @@
-import { useEffect, useState } from "react";
+import useTitle from "../../../hooks/useTitle";
 import ForAllToys from "../ForAllToys/ForAllToys";
+import { useLoaderData } from "react-router-dom";
 
 const AllToys = () => {
-    const [allToys, setallToys] = useState([]);
-    useEffect(() =>{
-        fetch('toy.json')
-        .then(res => res.json())
-        .then(data => setallToys(data))
-    },[])
+    const allToys = useLoaderData();
+    useTitle('All Toys')
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {
-                allToys.map(allToy =><ForAllToys key={allToy.id} allToy={allToy}></ForAllToys>)
-            }
+        <div className="overflow-x-auto">
+            <table className="table w-full">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Seller Name</th>
+                        <th>Toy Name</th>
+                        <th>Seller Email</th>
+                        <th>Category</th>
+                        <th>Available Quantity</th>
+                        <th>Price</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        allToys.map(allToy => <ForAllToys key={allToy.id} allToy={allToy}></ForAllToys>)
+                    }
+                </tbody>
+            </table>
         </div>
     );
 };
