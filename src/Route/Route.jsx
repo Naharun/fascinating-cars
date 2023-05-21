@@ -8,6 +8,7 @@ import Blog from "../pages/Home/Blog/Blog";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import SingleCarDetails from "../pages/SingleCarDetails/SingleCarDetails";
 import PrivateRoute from "./PrivateRoute";
+import AddAToys from "../pages/Home/AddAToys/AddAToys";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: '/allToys',
         element: <AllToys></AllToys>,
         loader: () => fetch('https://fascinating-cars-server.vercel.app/toys')
+      },
+      {
+        path: '/addAToy',
+        element: <AddAToys></AddAToys>,
       },
       {
         path: '/login',
