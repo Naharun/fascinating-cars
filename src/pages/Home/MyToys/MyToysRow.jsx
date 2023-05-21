@@ -9,8 +9,8 @@ const MyToysRow = ({toy,handleDelete}) => {
             <td>{availableQuantity}</td>
             <td>{price}</td>
             <td>{subCategory}</td>
-            <td><button onClick={() => handleDelete(_id)} className="btn btn-error">Delete</button></td>
-            <td><Link to={`/updateToy/${_id}`} className="btn btn-primary text-white">Update</Link></td>
+            <td><button onClick={() => handleDelete(_id)} className="btn btn-success">Delete</button></td>
+            <td><Link to={`/updateToy/${_id}`} className="btn btn-warning text-black">Update</Link></td>
         </tr>
     );
 };

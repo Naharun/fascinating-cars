@@ -96,7 +96,7 @@ const AddAToys = () => {
                                 <input type="text" name="details" placeholder="Details" className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn-btn-primary">Add A Toy</button>
+                                <button className="btn btn-warning">Add A Toy</button>
                             </div>
                         </form>
                     </div>
