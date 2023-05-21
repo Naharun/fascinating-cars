@@ -3,7 +3,7 @@ import img2 from '../../../assets/images/little-boy.avif'
 import img3 from '../../../assets/images/mother.avif'
 const ExtraSectionOne = () => {
     return (
-        <div>
+        <div className='mx-auto p-6'>
             <h2 className="text-4xl font-bold">OUR SHO<span className="text-amber-500">W</span>RO<span className="text-amber-500">O</span>M</h2><br />
             <p className="text-sky-800 text-xl">Location : Dhanmondi 9, Dhaka, Bangladesh </p>
             <br />

@@ -11,7 +11,7 @@ AOS.init();
 
 const Gallery = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 rounded-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 rounded-2xl mx-auto p-6">
             <div data-aos ='fade-up-right' className="card bg-base-100 shadow-xl mx-auto">
                 <figure><img src={img1} alt="Shoes" /></figure>
             </div>
