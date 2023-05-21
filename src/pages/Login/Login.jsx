@@ -18,13 +18,13 @@ const Login = () => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
+
         const password = form.password.value;
         console.log(email, password);
         signIn(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                from.reset();
                 Swal.fire({
                     title: 'Success!',
                     text: 'You are logged in Successfully!',

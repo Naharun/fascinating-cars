@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: '/allToys',
         element: <AllToys></AllToys>,
-        loader: () => fetch('http://localhost:5000/toys')
+        loader: () => fetch('https://fascinating-cars-server.vercel.app/toys')
       },
       {
         path: '/login',
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/viewDetails/:id',
         element: <PrivateRoute><SingleCarDetails></SingleCarDetails></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({params})=>fetch(`https://fascinating-cars-server.vercel.app/toys/${params.id}`)
       },
     ]
   },

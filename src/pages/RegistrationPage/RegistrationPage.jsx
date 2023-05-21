@@ -9,7 +9,7 @@ const RegistrationPage = () => {
     const handleRegistration = event => {
         event.preventDefault();
         const form = event.target;
-        const photo = event.form.photo.value;
+        const photo = form.photo.value;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
