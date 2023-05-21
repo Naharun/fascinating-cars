@@ -2,6 +2,7 @@ import img1 from '../../../assets/images/fun-gorilla-3d-illustration_183364-8008
 import img2 from '../../../assets/images/illustration-red-sport-car-toy-withe-background_714605-739.avif';
 import img3 from '../../../assets/images/funny-illustrated-car-painted-rainbow-colors_183364-23794.avif';
 import img4 from '../../../assets/images/dump-track-toy-loaded-with-blocks_470606-617.avif';
+import { FcCallback } from "react-icons/fc";
 const Banner = () => {
     return (
         <div>
@@ -23,7 +24,7 @@ const Banner = () => {
                 <div className='space-y-7 pl-12'>
                     <h2 className='text-5xl font-bold text-black'>A<span className='text-amber-500'>l</span>l Ki<span className='text-amber-500'>n</span>ds <br />Of Toy Ca<span className='text-amber-500'>r</span>s <br /><span className='text-amber-500'> A</span>re Av<span className='text-amber-500'>a</span>ila<span className='text-amber-500'>b</span>le</h2>
                     <p>We can provide the toy cars you need.There are <br /> many types of toy cars like <br /> sports car, truck, regular car, mini fire truck, mini police car, etc.</p>
-                    <button className='btn btn-warning'>Call Now</button>
+                    <button className='btn btn-warning'>Call Now<span className='text-3xl pl-2'><FcCallback /></span></button>
                 </div>
             </div>
             <div className="flex justify-center w-full py-2 gap-2">

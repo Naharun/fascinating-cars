@@ -1,7 +1,7 @@
 import Banner from "../Banner/Banner";
+import ExtraSectionOne from "../ExtraSection/ExtraSectionOne";
+import ExtraSectionTwo from "../ExtraSection/ExtraSectionTwo";
 import Gallery from "../Gallery/Gallery";
-import MyToys from "../myToys/myToys";
-
 const Home = () => {
     return (
         <div>
@@ -9,7 +9,9 @@ const Home = () => {
             <br />
             <Gallery></Gallery>
             <br />
-            <MyToys></MyToys>
+            <ExtraSectionOne></ExtraSectionOne>
+            <br />
+            <ExtraSectionTwo></ExtraSectionTwo>
         </div>
     );
 };

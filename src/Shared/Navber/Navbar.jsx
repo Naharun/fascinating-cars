@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
-
+import { FcInTransit } from "react-icons/fc";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
@@ -41,7 +41,7 @@ const Navbar = () => {
             {navPage}
           </ul>
         </div>
-        <h2 className="text-xl text-white font-bold capitalize hover:uppercase">Fas<span className="text-amber-500">cina</span>ting C<span className="text-amber-500">ar</span>s</h2>
+        <h2 className="text-xl text-white font-bold capitalize hover:uppercase flex"><span className="text-5xl pr-3"><FcInTransit /></span>Fas<span className="text-amber-500">cina</span>ting C<span className="text-amber-500">ar</span>s</h2>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end space-x-3">
 
-        {user ? <div className="flex items-center space-x-3"><Link><button onClick={handleLogOut} className="btn btn-secondary">Log Out</button></Link> <img className=" h-16 rounded-full" src={user.photoURL} alt="" title={user.displayName} /></div> : <Link to='/login'><button className="btn btn-secondary">Login</button></Link>}
+        {user ? <div className="flex items-center space-x-3"><Link><button onClick={handleLogOut} className="btn btn-accent text-white">Log Out</button></Link> <img className="btn btn-circle" src={user.photoURL} alt="" title={user.displayName} /></div> : <Link to='/login'><button className="btn btn-secondary">Login</button></Link>}
       </div>
     </div>
   );
